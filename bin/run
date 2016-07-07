@@ -71,6 +71,10 @@ client
 nobind
 dev tun
 redirect-gateway def1
+# Use DNS from DHCP options
+script-security 2
+up /etc/openvpn/update-resolv-conf
+down /etc/openvpn/update-resolv-conf
 
 <key>
 `cat key.pem`
